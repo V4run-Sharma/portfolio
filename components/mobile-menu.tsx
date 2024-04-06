@@ -1,16 +1,17 @@
 "use client";
+
 import { useState } from "react";
 
 import Link from "next/link";
 
-import { motion } from "framer-motion";
-
+import { BiX } from "react-icons/bi";
+import { LiaLinkedinIn } from "react-icons/lia";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { BsGithub, BsTwitterX } from "react-icons/bs";
-import { LiaLinkedin, LiaLinkedinIn } from "react-icons/lia";
+
+import { motion } from "framer-motion";
 
 import { links } from "@/lib/data";
-import { BiX } from "react-icons/bi";
 
 const MobileMenu = () => {
   const [isOpen, setIsOpen] = useState(false);

@@ -1,9 +1,10 @@
 "use client";
 
 import { useRef } from "react";
+
 import Image, { StaticImageData } from "next/image";
 
-import { BsArrowUpRight, BsGithub } from "react-icons/bs";
+import { BsGithub } from "react-icons/bs";
 
 import { motion, useScroll, useTransform } from "framer-motion";
 

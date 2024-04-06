@@ -1,7 +1,11 @@
 "use client";
-import { motion } from "framer-motion";
-import { links } from "@/lib/data";
+
 import Link from "next/link";
+
+import { links } from "@/lib/data";
+
+import clsx from "clsx";
+import { motion } from "framer-motion";
 
 const Header = () => {
   return (

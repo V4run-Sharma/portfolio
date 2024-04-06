@@ -1,9 +1,10 @@
 "use client";
 
-import { motion } from "framer-motion";
 import Link from "next/link";
-import { BsArrowDown, BsArrowDownCircleFill } from "react-icons/bs";
+
 import { IoIosArrowDown } from "react-icons/io";
+
+import { motion } from "framer-motion";
 
 const HeroPullUp = () => {
   return (
