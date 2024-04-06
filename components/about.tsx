@@ -4,9 +4,9 @@ import { motion } from "framer-motion";
 
 const About = () => {
   return (
-    <section>
+    <section id="about" className="scroll-mt-28">
       <motion.div
-        className="max-w-xl mt-4 sm:mt-0 flex flex-col gap-y-4"
+        className="max-w-xl mt-4 sm:mt-0 flex flex-col gap-y-4 sm:gap-y-8"
         initial={{ y: 100, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{

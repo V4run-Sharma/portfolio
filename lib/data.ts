@@ -54,18 +54,22 @@ export const experiencesData = [
 
 export const projectsData = [
   {
-    title: "Ghar",
-    description:
-      "A real estate platform where users can buy, sell, and rent properties. Customers can directly contact the property owner and negotiate the price.",
-    tags: ["React", "Javascript", "Next.js", "Tailwind", "Redux-Toolkit"],
-    imageUrl: GharHero,
-  },
-  {
     title: "Viscord",
     description:
       "Viscord is a chat application where users can create servers, channels, and text, audio and video chat with other users one-on-one and in the server channels. Users can also upload images and files.",
     tags: ["React", "Next.js", "NeonDB", "Tailwind", "Prisma", "UploadThing"],
     imageUrl: ViscordChat,
+    gitRepo: "https://github.com/V4run-Sharma/viscord",
+    live: "https://viscord-two.vercel.app",
+  },
+  {
+    title: "Ghar",
+    description:
+      "A real estate platform where users can buy, sell, and rent properties. Customers can directly contact the property owner and negotiate the price.",
+    tags: ["React", "Javascript", "Next.js", "Tailwind", "Redux-Toolkit"],
+    imageUrl: GharHero,
+    gitRepo: "https://github.com/V4run-Sharma/ghar",
+    live: "https://gharrealestate.onrender.com",
   },
 ] as const;
 
