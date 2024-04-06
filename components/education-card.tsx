@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect, useRef, useState } from "react";
+import React, { useRef } from "react";
 
 import { motion, useScroll, useTransform } from "framer-motion";
 
@@ -17,14 +17,6 @@ const EducationCard = ({
   location,
   date,
 }: EducationCardProps) => {
-  const [isMobile, setIsMobile] = useState(false);
-  useEffect(() => {
-    if (window.innerWidth <= 640) {
-      setIsMobile(true);
-    } else {
-      setIsMobile(false);
-    }
-  }, [isMobile]);
   const ref = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
     target: ref,
@@ -37,8 +29,8 @@ const EducationCard = ({
     <motion.div
       ref={ref}
       style={{
-        scale: isMobile ? 1 : scaleProgess,
-        opacity: isMobile ? 1 : opacityProgess,
+        scale: scaleProgess,
+        opacity: opacityProgess,
       }}>
       <article className="p-4 sm:p-8 rounded-lg bg-gray-50 bg-opacity-60 border-white border-2 border-opacity-80 hover:bg-opacity-100 transition">
         <div className="flex flex-col gap-y-2 sm:gap-y-4">
