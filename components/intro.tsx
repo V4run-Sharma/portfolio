@@ -29,7 +29,7 @@ const Intro = () => {
             src={me}
             width={323}
             height={360}
-            quality={90}
+            quality={75}
             priority={true}
             alt="Varun's Photo"
             className="object-cover scale-110"

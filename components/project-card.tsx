@@ -82,7 +82,7 @@ const ProjectCard = ({
           <Image
             src={imageUrl}
             alt="Project I worked on"
-            quality={95}
+            quality={75}
             className={`absolute hidden sm:block top-8 -right-40 w-[28.25rem] rounded-lg shadow-2xl transition group-hover:scale-[1.04] group-hover:-translate-x-3 group-hover:translate-y-3 group-hover:-rotate-2 ${
               index % 2 !== 0
                 ? "group-hover:translate-x-3 group-hover:translate-y-3 group-hover:rotate-2 right-[initial] -left-40"
