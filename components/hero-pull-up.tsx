@@ -16,7 +16,7 @@ const HeroPullUp = () => {
           stiffness: 250,
         }}>
         <Link href="#about">
-          <div className="mt-4 min-[402px]:mt-24 sm:mt-6 flex justify-center items-end sm:w-52 w-24 h-7 border-2 border-white border-opacity-80 bg-gray-50 bg-opacity-40 shadow-lg shadow-black/[0.03] backdrop-blur-[0.5rem] rounded-lg sm:hover:h-24 sm:transition-all">
+          <div className="flex mt-6 sm:mt-0 justify-center items-center sm:w-[12rem] w-24 sm:h-12 h-6 border-2 border-white border-opacity-80 bg-gray-50 bg-opacity-40 shadow-lg shadow-black/[0.03] backdrop-blur-[0.5rem] rounded-lg sm:hover:w-[24rem] sm:transition-all sm:duration-300">
             <IoIosArrowDown size={24} />
           </div>
         </Link>
