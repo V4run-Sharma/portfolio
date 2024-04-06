@@ -13,7 +13,9 @@ import me from "@/public/me.webp";
 
 const Intro = () => {
   return (
-    <section className="flex flex-col items-center justify-center sm:gap-y-8 gap-y-4">
+    <section
+      id="home"
+      className="flex flex-col items-center justify-center scroll-mt-28 sm:gap-y-8 gap-y-4">
       <div className="relative h-fit w-fit">
         <motion.div
           className="w-40 h-40 rounded-full border-4 border-white overflow-hidden"
