@@ -59,7 +59,7 @@ const MobileMenu = () => {
         onClick={() => setIsOpen(!isOpen)}
         className={`fixed top-4 right-4 z-10 ${
           isOpen ? "p-1" : "p-2"
-        } border-2 border-black border-opacity-40 bg-[#d0f2f7] bg-opacity-80 shadow-lg shadow-black/[0.03] backdrop-blur-[10rem] rounded-lg`}>
+        } border-2 border-white border-opacity-40 bg-gray-50 bg-opacity-80 shadow-lg shadow-black/[0.03] backdrop-blur-[10rem] rounded-lg`}>
         {isOpen ? (
           <BiX color="#030712" size={24} />
         ) : (
@@ -68,7 +68,7 @@ const MobileMenu = () => {
       </motion.div>
       {isOpen ? (
         <motion.nav
-          className="fixed top-16 right-4 z-10 border-2 px-4 border-white border-opacity-40 bg-[#d0f2f7] bg-opacity-80 shadow-lg shadow-gray-500/[0.3] backdrop-blur-[3rem] rounded-lg"
+          className="fixed top-16 right-4 z-10 border-2 px-4 border-white border-opacity-40 bg-gray-50 bg-opacity-80 shadow-lg shadow-gray-500/[0.3] backdrop-blur-[0.5rem] rounded-lg"
           initial={{ y: -100, scaleY: 0, opacity: 0 }}
           animate={{ y: 0, scaleY: 1, opacity: 1 }}>
           <ul>
