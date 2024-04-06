@@ -14,3 +14,13 @@
     scrollbar-width: none;
     /* Firefox */
 }
+
+/* Make new colors */
+:root {
+    --linkcolora: #c6d4ff;
+    --linkcolorb: #c0ddf9;
+    --linkcolorc: #bae5f4;
+    --linkcolord: #b4eeee;
+    --linkcolore: #aef6e9;
+    --linkcolorf: #a8ffe3;
+}

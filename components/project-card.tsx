@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 
 import Image, { StaticImageData } from "next/image";
 
@@ -27,6 +27,14 @@ const ProjectCard = ({
   gitRepo,
   live,
 }: ProjectCardProps) => {
+  const [isMobile, setIsMobile] = useState(false);
+  useEffect(() => {
+    if (window.innerWidth <= 640) {
+      setIsMobile(true);
+    } else {
+      setIsMobile(false);
+    }
+  }, [isMobile]);
   const ref = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
     target: ref,
@@ -38,8 +46,8 @@ const ProjectCard = ({
     <motion.div
       ref={ref}
       style={{
-        scale: scaleProgess,
-        opacity: opacityProgess,
+        scale: isMobile ? 1 : scaleProgess,
+        opacity: isMobile ? 1 : opacityProgess,
       }}
       className="relative">
       <article className="relative">
