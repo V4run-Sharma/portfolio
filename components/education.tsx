@@ -2,13 +2,14 @@
 
 import React, { useEffect } from "react";
 
-import { projectsData } from "@/lib/data";
+import { motion } from "framer-motion";
 
-import ProjectCard from "./project-card";
+import { education } from "@/lib/data";
 import { useActiveSectionContext } from "@/contexts/active-section-context";
 import { useInView } from "react-intersection-observer";
+import EducationCard from "./education-card";
 
-const Projects = () => {
+const Education = () => {
   const { setActiveSection } = useActiveSectionContext();
   const { ref, inView } = useInView();
   useEffect(() => {
@@ -18,22 +19,17 @@ const Projects = () => {
   }, [inView]);
 
   return (
-    <section ref={ref} id="projects" className="scroll-mt-28">
+    <section ref={ref} id="education" className="sm:scroll-mt-28">
       <div className="flex flex-col gap-y-4 sm:gap-y-8">
-        <h1 className="sm:text-2xl text-xl font-bold text-center">
-          My Projects
-        </h1>
+        <h1 className="sm:text-2xl text-xl font-bold text-center">Education</h1>
         <div className="flex flex-col gap-y-4 sm:gap-y-6">
-          {projectsData.map((project, index) => (
+          {education.map((edu, index) => (
             <React.Fragment key={index}>
-              <ProjectCard
-                index={index}
-                title={project.title}
-                description={project.description}
-                tags={Array.from(project.tags)}
-                imageUrl={project.imageUrl}
-                gitRepo={project.gitRepo}
-                live={project.live}
+              <EducationCard
+                degree={edu.degree}
+                college={edu.college}
+                location={edu.location}
+                date={edu.date}
               />
             </React.Fragment>
           ))}
@@ -43,4 +39,4 @@ const Projects = () => {
   );
 };
 
-export default Projects;
+export default Education;

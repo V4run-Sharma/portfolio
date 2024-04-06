@@ -10,10 +10,22 @@ import { FaClipboardList } from "react-icons/fa";
 import { motion } from "framer-motion";
 
 import me from "@/public/me.webp";
+import { useActiveSectionContext } from "@/contexts/active-section-context";
+import { useInView } from "react-intersection-observer";
+import { useEffect } from "react";
 
 const Intro = () => {
+  const { setActiveSection } = useActiveSectionContext();
+  const { ref, inView } = useInView();
+  useEffect(() => {
+    if (inView) {
+      setActiveSection("Home");
+    }
+  }, [inView]);
+
   return (
     <section
+      ref={ref}
       id="home"
       className="flex flex-col items-center justify-center scroll-mt-28 sm:gap-y-8 gap-y-4">
       <div className="relative h-fit w-fit">

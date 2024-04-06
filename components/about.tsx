@@ -1,10 +1,28 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { useActiveSectionContext } from "@/contexts/active-section-context";
+import { education } from "@/lib/data";
+import { motion, useScroll, useTransform } from "framer-motion";
+import { MotionValue } from "framer-motion/dom";
+import { useEffect, useRef, useState } from "react";
+import { useInView } from "react-intersection-observer";
 
 const About = () => {
+  const { setActiveSection } = useActiveSectionContext();
+
+  const { ref, inView } = useInView();
+
+  useEffect(() => {
+    if (inView) {
+      setActiveSection("About");
+    }
+  }, [inView]);
+
   return (
-    <section id="about" className="scroll-mt-28">
+    <section
+      ref={ref}
+      id="about"
+      className="scroll-mt-28 flex flex-col items-center gap-y-4 sm:gap-y-8">
       <motion.div
         className="max-w-xl mt-4 sm:mt-0 flex flex-col gap-y-4 sm:gap-y-8"
         initial={{ y: 100, opacity: 0 }}
@@ -13,12 +31,13 @@ const About = () => {
           delay: 0.175,
         }}>
         <h1 className="sm:text-2xl text-xl font-bold text-center">About Me</h1>
-        <p className="text-center text-sm leading-loose sm:[word-spacing:0.25rem]">
-          I specialize in crafting professional websites using React, especially
-          Next.js. My focus lies in delivering seamless user experiences with a
-          keen eye for design and functionality. Continuously refining my skills
-          keeps me ahead in the digital landscape, ensuring I deliver top-notch
-          results that leave a lasting impression.
+        <p className="text-center text-sm sm:text-base font-medium leading-loose sm:leading-8 sm:[word-spacing:0.25rem]">
+          I specialize in crafting professional websites using{" "}
+          <strong>React</strong>, especially <strong>Next.js</strong>. My focus
+          lies in delivering <em>seamless user experiences</em> with a keen eye
+          for design and functionality. Continuously refining my skills keeps me
+          ahead in the digital landscape, ensuring I deliver top-notch results
+          that leave a lasting impression.
         </p>
       </motion.div>
     </section>

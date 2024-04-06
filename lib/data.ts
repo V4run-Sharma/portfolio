@@ -14,6 +14,10 @@ export const links = [
     hash: "#about",
   },
   {
+    name: "Education",
+    hash: "#education",
+  },
+  {
     name: "Projects",
     hash: "#projects",
   },
@@ -30,6 +34,21 @@ export const links = [
     hash: "#contact",
   },
 ] as const;
+
+export const education = [
+  {
+    degree: "B.Tech in CSE (8.43 CGPA)",
+    college: "Techno India NJR Institute of Technology",
+    location: "Udaipur, Rajasthan",
+    date: "2021 - 2025 (Expected)",
+  },
+  {
+    degree: "Senior Secondary (92.40%)",
+    college: "The Creative Brain Academy",
+    location: "Rajsamand, Rajasthan",
+    date: "2018 - 2020",
+  },
+];
 
 export const experiencesData = [
   {
