@@ -1,6 +1,6 @@
 "use client";
 
-import { useLayoutEffect, useRef, useState } from "react";
+import { useRef } from "react";
 
 import Image, { StaticImageData } from "next/image";
 

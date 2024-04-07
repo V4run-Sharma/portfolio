@@ -1,10 +1,11 @@
 "use client";
 
+import { useEffect } from "react";
+
 import { useActiveSectionContext } from "@/contexts/active-section-context";
-import { education } from "@/lib/data";
-import { motion, useScroll, useTransform } from "framer-motion";
-import { MotionValue } from "framer-motion/dom";
-import { useEffect, useRef, useState } from "react";
+
+import { motion } from "framer-motion";
+
 import { useInView } from "react-intersection-observer";
 
 const About = () => {

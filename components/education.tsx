@@ -2,11 +2,10 @@
 
 import React, { useEffect } from "react";
 
-import { motion } from "framer-motion";
-
 import { education } from "@/lib/data";
 import { useActiveSectionContext } from "@/contexts/active-section-context";
 import { useInView } from "react-intersection-observer";
+
 import EducationCard from "./education-card";
 
 const Education = () => {

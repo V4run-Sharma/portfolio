@@ -4,10 +4,9 @@ import { Inter } from "next/font/google";
 
 import Header from "@/components/header";
 import MobileMenu from "@/components/mobile-menu";
+import ActiveSectionContextProvider from "@/contexts/active-section-context";
 
 import "./globals.css";
-import Header2 from "@/components/header";
-import ActiveSectionContextProvider from "@/contexts/active-section-context";
 
 const inter = Inter({ subsets: ["latin"] });
 

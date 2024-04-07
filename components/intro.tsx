@@ -1,7 +1,8 @@
 "use client";
 
-import Image from "next/image";
 import Link from "next/link";
+import Image from "next/image";
+import { useEffect } from "react";
 
 import { BsArrowRight, BsGithub, BsTwitterX } from "react-icons/bs";
 import { LiaLinkedinIn } from "react-icons/lia";
@@ -9,10 +10,10 @@ import { FaClipboardList } from "react-icons/fa";
 
 import { motion } from "framer-motion";
 
-import me from "@/public/me.webp";
 import { useActiveSectionContext } from "@/contexts/active-section-context";
 import { useInView } from "react-intersection-observer";
-import { useEffect } from "react";
+
+import me from "@/public/me.webp";
 
 const Intro = () => {
   const { setActiveSection } = useActiveSectionContext();
