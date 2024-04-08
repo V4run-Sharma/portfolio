@@ -8,11 +8,10 @@ import { skillsData } from "@/lib/data";
 import { useSectionInView } from "@/lib/hooks";
 
 const fadeInAnimationVariants = {
-  initial: { y: 50, opacity: 0 },
+  initial: { opacity: 0 },
   animate: (index: number) => ({
-    y: 0,
     opacity: 1,
-    transition: { delay: index * 0.05 },
+    transition: { delay: index * 0.025 },
   }),
 };
 
@@ -31,9 +30,9 @@ const Skills = () => {
               initial="initial"
               whileInView="animate"
               custom={index}
-              viewport={{
-                once: true,
-              }}
+              // viewport={{
+              //   once: true,
+              // }}
               className="bg-gray-700 sm:px-4 px-3 sm:py-2 py-1 sm:text-sm text-xs uppercase tracking-wider text-white rounded-full darktext-white/70 hover:bg-gray-950 transition">
               {skill}
             </motion.div>

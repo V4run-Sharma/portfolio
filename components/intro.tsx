@@ -76,7 +76,7 @@ const Intro = () => {
           }}>
           <Link
             href="#contact"
-            className="flex justify-center items-center gap-x-3 w-fit px-8 py-4 text-sm font-medium rounded-full bg-gray-950 text-gray-50 shadow-lg hover:scale-110 group transition duration-300">
+            className="flex justify-center items-center gap-x-3 w-fit px-8 py-4 text-sm font-medium rounded-full bg-gray-700 text-gray-50 shadow-lg hover:scale-110 hover:bg-gray-950 group transition duration-300">
             Contact Me{" "}
             <BsArrowRight
               size={16}
