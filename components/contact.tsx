@@ -8,6 +8,7 @@ import sendEmail from "@/actions/send-email";
 
 const Contact = () => {
   const { ref } = useSectionInView("Contact", 1);
+  const [resData, setResData] = useState<unknown>();
   const [sending, setSending] = useState(false);
 
   return (
@@ -27,7 +28,13 @@ const Contact = () => {
       </p>
       <div className="p-[1.5px] rounded-lg bg-gradient-to-b from-[#c6d4ff] to-[#a8ffe3] flex flex-col justify-center items-center">
         <form
-          action={async (formData: FormData) => sendEmail(formData)}
+          action={async (formData: FormData) => {
+            setSending(true);
+            const res: unknown = await sendEmail(formData);
+            if (res) setSending(false);
+            const error: unknown = res;
+            setResData(error);
+          }}
           className="p-4 sm:p-6 rounded-md flex flex-col items-center gap-y-4 sm:gap-y-6 max-w-xl w-full bg-gray-50 bg-opacity-80">
           <input
             type="email"

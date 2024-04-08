@@ -1,12 +1,13 @@
 "use server";
 
+import { stringify } from "querystring";
 import { Resend } from "resend";
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 
 const sendEmail = async (formData: FormData) => {
   const senderEmail = formData.get("senderEmail");
-  const subject = formData.get("subject");
+  const subject = senderEmail + "___" + formData.get("subject");
   const message = formData.get("message");
   if (
     !senderEmail ||
@@ -31,14 +32,15 @@ const sendEmail = async (formData: FormData) => {
   }
 
   try {
-    await resend.emails.send({
+    const res = await resend.emails.send({
       from: "Portfolio Contact <onboarding@resend.dev>",
       to: "sharmavarun.1912@gmail.com",
       subject: subject,
       reply_to: senderEmail,
       text: message,
     });
-    return {};
+    console.log(res);
+    return res;
   } catch (error: unknown) {
     if (error instanceof Error) {
       return {
