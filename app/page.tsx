@@ -9,7 +9,7 @@ import Contact from "@/components/contact";
 
 export default function Home() {
   return (
-    <main className="flex flex-col justify-center items-center sm:gap-y-16 gap-y-6 sm:pt-28 p-8 pt-20">
+    <main className="flex flex-col justify-center items-center sm:gap-y-16 gap-y-6 sm:pt-28 px-8 pt-20">
       <Intro />
       <HeroPullUp />
       <About />

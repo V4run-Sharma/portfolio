@@ -7,6 +7,7 @@ import MobileMenu from "@/components/mobile-menu";
 import ActiveSectionContextProvider from "@/contexts/active-section-context";
 
 import "./globals.css";
+import Footer from "@/components/Footer";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -31,6 +32,7 @@ export default function RootLayout({
           <Header />
           <MobileMenu />
           {children}
+          <Footer />
         </ActiveSectionContextProvider>
       </body>
     </html>
