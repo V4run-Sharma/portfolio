@@ -11,7 +11,8 @@ import { links } from "@/lib/data";
 import { useActiveSectionContext } from "@/contexts/active-section-context";
 
 export default function Header() {
-  const { activeSection, setActiveSection } = useActiveSectionContext();
+  const { activeSection, setActiveSection, setTimeOfLastClick } =
+    useActiveSectionContext();
 
   return (
     <header className="z-[999] hidden sm:block relative">
@@ -36,7 +37,10 @@ export default function Header() {
                   }
                 )}
                 href={link.hash}
-                onClick={() => setActiveSection(link.name)}>
+                onClick={() => {
+                  setActiveSection(link.name);
+                  setTimeOfLastClick(Date.now());
+                }}>
                 {link.name}
                 {link.name === activeSection && (
                   <motion.span

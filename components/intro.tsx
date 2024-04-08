@@ -2,7 +2,6 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { useEffect } from "react";
 
 import { BsArrowRight, BsGithub, BsTwitterX } from "react-icons/bs";
 import { LiaLinkedinIn } from "react-icons/lia";
@@ -10,20 +9,11 @@ import { FaClipboardList } from "react-icons/fa";
 
 import { motion } from "framer-motion";
 
-import { useActiveSectionContext } from "@/contexts/active-section-context";
-import { useInView } from "react-intersection-observer";
-
 import me from "@/public/me.webp";
+import { useSectionInView } from "@/lib/hooks";
 
 const Intro = () => {
-  const { setActiveSection } = useActiveSectionContext();
-  const { ref, inView } = useInView();
-  useEffect(() => {
-    if (inView) {
-      setActiveSection("Home");
-    }
-  }, [inView]);
-
+  const { ref } = useSectionInView("Home", 0.5);
   return (
     <section
       ref={ref}
@@ -104,7 +94,7 @@ const Intro = () => {
             delay: 0.05,
           }}>
           <a href="Varun Sharma Resume Updated.pdf" target="_blank">
-            <p className="flex justify-center items-center gap-x-3 w-fit px-[30px] py-[12px] text-base font-medium border-2 border-white border-opacity-80 bg-gray-50 bg-opacity-40 shadow-lg shadow-black/[0.03] backdrop-blur-[0.5rem] rounded-full  hover:scale-110 hover:bg-white transition duration-300">
+            <p className="flex justify-center items-center gap-x-3 w-fit px-[30px] py-[12px] text-base font-medium border-2 border-white border-opacity-80 bg-gray-50 bg-opacity-40 shadow-lg shadow-black/[0.03] backdrop-blur-[0.5rem] rounded-full  hover:scale-110 hover:bg-opacity-100 transition duration-300">
               Resume
               <FaClipboardList size={16} />
             </p>
