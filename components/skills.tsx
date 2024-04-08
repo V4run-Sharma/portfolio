@@ -1,0 +1,47 @@
+"use client";
+
+import React from "react";
+
+import { delay, motion } from "framer-motion";
+
+import { skillsData } from "@/lib/data";
+import { useSectionInView } from "@/lib/hooks";
+
+const fadeInAnimationVariants = {
+  initial: { y: 50, opacity: 0 },
+  animate: (index: number) => ({
+    y: 0,
+    opacity: 1,
+    transition: { delay: index * 0.05 },
+  }),
+};
+
+const Skills = () => {
+  const { ref } = useSectionInView("Skills", 0.25);
+
+  return (
+    <section ref={ref} id="skills" className="sm:scroll-mt-56">
+      <div className="flex flex-col max-w-xl gap-y-4 sm:gap-y-8">
+        <h1 className="sm:text-2xl text-xl font-bold text-center">Skills</h1>
+        <div className="flex flex-wrap justify-center items-center gap-2 sm:gap-4">
+          {skillsData?.map((skill, index) => (
+            <motion.div
+              key={index}
+              variants={fadeInAnimationVariants}
+              initial="initial"
+              whileInView="animate"
+              custom={index}
+              viewport={{
+                once: true,
+              }}
+              className="bg-gray-700 sm:px-4 px-3 sm:py-2 py-1 sm:text-sm text-xs uppercase tracking-wider text-white rounded-full darktext-white/70 hover:bg-gray-950 transition">
+              {skill}
+            </motion.div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default Skills;

@@ -8,7 +8,7 @@ import ProjectCard from "./project-card";
 import { useSectionInView } from "@/lib/hooks";
 
 const Projects = () => {
-  const { ref } = useSectionInView("Projects", 0.5);
+  const { ref } = useSectionInView("Projects", 0.75);
 
   return (
     <section ref={ref} id="projects" className="scroll-mt-28">
