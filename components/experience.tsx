@@ -14,7 +14,7 @@ const Experience = () => {
   const { ref } = useSectionInView("Experience", 0.25);
 
   return (
-    <section id="experience" ref={ref} className="sm:scroll-mt-28">
+    <section id="experience" ref={ref} className="scroll-mt-28">
       <h1 className="sm:text-2xl text-xl font-bold text-center mb-4 sm:mb-8">
         Experience
       </h1>
@@ -37,16 +37,19 @@ const Experience = () => {
                   margin: "0 0.5rem",
                 }}
                 date={exp.date}
+                dateClassName="!text-gray-700 !font-semibold !text-sm !capitalize"
                 icon={exp.icon}
                 iconStyle={{
-                  padding: "0.5rem",
-                  background: "white",
+                  padding: "0rem",
+                  background: "#f3f4f6",
                   fontSize: "1.5rem",
                 }}>
-                <h3 className="!font-semibold !capitalize">{exp.title}</h3>
-                <p className="!mt-0">{exp.company}</p>
+                <h3 className="!font-semibold !text-xl !capitalize">
+                  {exp.title}
+                </h3>
+                <p className="!mt-0 !text-lg">{exp.company}</p>
                 <p className="!text-sm !mt-0 !text-gray-500">{exp.location}</p>
-                <p className="!mt-2 !text-sm !text-gray-700">
+                <p className="!mt-2 !leading-relaxed !text-gray-700">
                   {exp.description}
                 </p>
               </VerticalTimelineElement>
@@ -58,12 +61,14 @@ const Experience = () => {
         {experiencesData.map((exp, index) => (
           <React.Fragment key={index}>
             <div className="p-[1.5px] rounded-lg bg-gradient-to-b from-[#c6d4ff] to-[#a8ffe3] flex justify-center items-center">
-              <div className="w-full h-full flex flex-col p-4 bg-gray-100 hover:bg-gray-50 transition rounded-md">
+              <div className="w-full h-full flex flex-col text-gray-950 p-4 bg-gray-100 hover:bg-gray-50 transition rounded-md">
                 <h3 className="font-semibold capitalize">{exp.title}</h3>
                 <p>{exp.company}</p>
                 <p className="text-xs text-gray-500">{exp.location}</p>
                 <p className="text-xs text-gray-500 font-bold">{exp.date}</p>
-                <p className="text-sm mt-4 text-gray-700">{exp.description}</p>
+                <p className="text-xs font-medium mt-4 text-gray-500 leading-5">
+                  {exp.description}
+                </p>
               </div>
             </div>
           </React.Fragment>

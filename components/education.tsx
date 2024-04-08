@@ -11,7 +11,7 @@ const Education = () => {
   const { ref } = useSectionInView("Education", 1);
 
   return (
-    <section ref={ref} id="education" className="scroll-mt-56">
+    <section ref={ref} id="education" className="scroll-mt-28">
       <div className="flex flex-col gap-y-4 sm:gap-y-8">
         <h1 className="sm:text-2xl text-xl font-bold text-center">Education</h1>
         <div className="flex flex-col gap-y-4 sm:gap-y-6">

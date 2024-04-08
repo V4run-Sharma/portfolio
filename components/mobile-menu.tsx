@@ -20,42 +20,6 @@ const MobileMenu = () => {
       <motion.div
         initial={{ y: -100, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
-        transition={{
-          delay: -0.05,
-        }}
-        className={`fixed top-4 right-40 z-10 p-1 border-2 border-white border-opacity-40 bg-[#0077b5] shadow-lg shadow-black/[0.1] rounded-lg`}>
-        <a href="https://linkedin.com/in/varunsharmao2" target="_blank">
-          <LiaLinkedinIn color="white" size={24} />
-        </a>
-      </motion.div>
-      <motion.div
-        initial={{ y: -100, opacity: 0 }}
-        animate={{ y: 0, opacity: 1 }}
-        transition={{
-          delay: -0.2,
-        }}
-        className={`fixed top-4 right-28 z-10 p-2 border-2 border-white border-opacity-40 bg-[#2b3137] shadow-lg shadow-black/[0.1] rounded-lg`}>
-        <a href="https://github.com/V4run-Sharma" target="_blank">
-          <BsGithub color="#030712" size={16} fill="white" />
-        </a>
-      </motion.div>
-      <motion.div
-        initial={{ y: -100, opacity: 0 }}
-        animate={{ y: 0, opacity: 1 }}
-        transition={{
-          delay: -0.35,
-        }}
-        className={`fixed top-4 right-16 z-10 p-2 border-2 border-white border-opacity-40 bg-black shadow-lg shadow-black/[0.1] backdrop-blur-[10rem] rounded-lg`}>
-        <a href="https://twitter.com/V4runSharma" target="_blank">
-          <BsTwitterX color="#030712" size={16} fill="white" />
-        </a>
-      </motion.div>
-      <motion.div
-        initial={{ y: -100, opacity: 0 }}
-        animate={{ y: 0, opacity: 1 }}
-        transition={{
-          delay: -0.5,
-        }}
         onClick={() => setIsOpen(!isOpen)}
         className={`fixed top-4 right-4 z-10 ${
           isOpen ? "p-1" : "p-2"
@@ -67,18 +31,53 @@ const MobileMenu = () => {
         )}
       </motion.div>
       {isOpen ? (
-        <motion.nav
-          className="fixed top-16 right-4 z-10 border-2 px-4 border-white border-opacity-40 bg-gray-50 bg-opacity-80 shadow-lg shadow-gray-500/[0.3] backdrop-blur-[0.5rem] rounded-lg"
-          initial={{ y: -100, scaleY: 0, opacity: 0 }}
-          animate={{ y: 0, scaleY: 1, opacity: 1 }}>
-          <ul>
-            {links.map((link) => (
-              <li key={link.hash} className="py-2 font-semibold">
-                <Link href={link.hash}>{link.name}</Link>
-              </li>
-            ))}
-          </ul>
-        </motion.nav>
+        <>
+          <motion.div
+            initial={{ y: -100, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            transition={{
+              delay: 0.1,
+            }}
+            className={`fixed top-4 right-40 z-10 p-1 border-2 border-white border-opacity-40 bg-[#0077b5] shadow-lg shadow-black/[0.1] rounded-lg`}>
+            <a href="https://linkedin.com/in/varunsharmao2" target="_blank">
+              <LiaLinkedinIn color="white" size={24} />
+            </a>
+          </motion.div>
+          <motion.div
+            initial={{ y: -100, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            transition={{
+              delay: 0.05,
+            }}
+            className={`fixed top-4 right-28 z-10 p-2 border-2 border-white border-opacity-40 bg-[#2b3137] shadow-lg shadow-black/[0.1] rounded-lg`}>
+            <a href="https://github.com/V4run-Sharma" target="_blank">
+              <BsGithub color="#030712" size={16} fill="white" />
+            </a>
+          </motion.div>
+          <motion.div
+            initial={{ y: -100, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            transition={{
+              delay: 0,
+            }}
+            className={`fixed top-4 right-16 z-10 p-2 border-2 border-white border-opacity-40 bg-black shadow-lg shadow-black/[0.1] backdrop-blur-[10rem] rounded-lg`}>
+            <a href="https://twitter.com/V4runSharma" target="_blank">
+              <BsTwitterX color="#030712" size={16} fill="white" />
+            </a>
+          </motion.div>
+          <motion.nav
+            className="fixed top-16 right-4 z-10 border-2 px-4 border-white border-opacity-40 bg-gray-50 bg-opacity-80 shadow-lg shadow-gray-500/[0.3] backdrop-blur-[0.5rem] rounded-lg"
+            initial={{ y: -100, scaleY: 0, opacity: 0 }}
+            animate={{ y: 0, scaleY: 1, opacity: 1 }}>
+            <ul>
+              {links.map((link) => (
+                <li key={link.hash} className="py-2 font-semibold">
+                  <Link href={link.hash}>{link.name}</Link>
+                </li>
+              ))}
+            </ul>
+          </motion.nav>
+        </>
       ) : null}
     </header>
   );

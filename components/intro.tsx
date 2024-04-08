@@ -53,7 +53,7 @@ const Intro = () => {
       </div>
       <div className="max-w-xl">
         <motion.p
-          className="sm:text-2xl text-xl font-medium text-center"
+          className="sm:text-2xl text-lg leading-loose text-gray-950 font-semibold text-center"
           initial={{ y: 50, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{
