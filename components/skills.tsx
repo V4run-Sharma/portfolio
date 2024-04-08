@@ -2,7 +2,7 @@
 
 import React from "react";
 
-import { delay, motion } from "framer-motion";
+import { motion } from "framer-motion";
 
 import { skillsData } from "@/lib/data";
 import { useSectionInView } from "@/lib/hooks";
@@ -17,10 +17,10 @@ const fadeInAnimationVariants = {
 };
 
 const Skills = () => {
-  const { ref } = useSectionInView("Skills", 0.25);
+  const { ref } = useSectionInView("Skills", 1);
 
   return (
-    <section ref={ref} id="skills" className="sm:scroll-mt-56">
+    <section ref={ref} id="skills" className="scroll-mt-28 sm:scroll-mt-56">
       <div className="flex flex-col max-w-xl gap-y-4 sm:gap-y-8">
         <h1 className="sm:text-2xl text-xl font-bold text-center">Skills</h1>
         <div className="flex flex-wrap justify-center items-center gap-2 sm:gap-4">

@@ -53,8 +53,8 @@ export const education = [
 export const experiencesData = [
   {
     title: "MACHINE LEARNING WORKSHOP",
-    location: "Udaipur, Rajasthan",
     company: "NASSCOM FutureSkills Prime",
+    location: "Udaipur, Rajasthan",
     description:
       "Spearheaded a hands-on workshop delving into Data Analysis and Machine Learning, gaining expertise in Supervised, Unsupervised, and Reinforcement Learning. Proficiently applied statistical methodologies like Linear, Non-Linear, and Polynomial Regression, optimizing model performance and increasing predictive accuracy by 30%.",
     icon: React.createElement(CgWorkAlt),
@@ -62,8 +62,8 @@ export const experiencesData = [
   },
   {
     title: "DATA ANALYST INTERN",
-    location: "Udaipur, Rajasthan (Remote)",
     company: "IBM Skills Build",
+    location: "Udaipur, Rajasthan (Remote)",
     description:
       "Spearheaded a hands-on workshop delving into Data Analysis and Machine Learning, gaining expertise in Supervised, Unsupervised, and Reinforcement Learning. Proficiently applied statistical methodologies like Linear, Non-Linear, and Polynomial Regression, optimizing model performance and increasing predictive accuracy by 30%.",
     icon: React.createElement(FaPython),

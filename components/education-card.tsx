@@ -32,8 +32,8 @@ const EducationCard = ({
         scale: scaleProgess,
         opacity: opacityProgess,
       }}>
-      <article className="p-4 sm:p-8 rounded-lg bg-gray-50 bg-opacity-60 border-white border-2 border-opacity-80 hover:bg-opacity-100 transition">
-        <div className="flex flex-col gap-y-2 sm:gap-y-4">
+      <article className="p-[1.5px] rounded-lg bg-gradient-to-b from-[#c6d4ff] to-[#a8ffe3] flex justify-center items-center">
+        <div className="w-full h-full flex flex-col p-4 sm:p-6 bg-gray-100 hover:bg-gray-50 transition rounded-md gap-y-2 sm:gap-y-4">
           <h2 className="text-lg sm:text-xl font-bold">{degree}</h2>
           <div className="flex flex-col">
             <h3 className="text-base sm:text-lg font-medium">{college}</h3>
