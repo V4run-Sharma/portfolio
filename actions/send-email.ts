@@ -1,14 +1,18 @@
 "use server";
 
-import { stringify } from "querystring";
 import { Resend } from "resend";
 
 const resend = new Resend(process.env.RESEND_API_KEY);
+
+// Track the timestamp of the last message sent
+let lastMessageSentTime: number | null = null;
 
 const sendEmail = async (formData: FormData) => {
   const senderEmail = formData.get("senderEmail");
   const subject = senderEmail + "___" + formData.get("subject");
   const message = formData.get("message");
+  const currentTime = Date.now();
+
   if (
     !senderEmail ||
     typeof senderEmail !== "string" ||
@@ -31,6 +35,15 @@ const sendEmail = async (formData: FormData) => {
     };
   }
 
+  if (
+    lastMessageSentTime &&
+    currentTime - lastMessageSentTime < 10 * 60 * 1000
+  ) {
+    return {
+      error: "Please wait for 5 minutes before sending another message.",
+    };
+  }
+
   try {
     const res = await resend.emails.send({
       from: "Portfolio Contact <onboarding@resend.dev>",
@@ -39,7 +52,11 @@ const sendEmail = async (formData: FormData) => {
       reply_to: senderEmail,
       text: message,
     });
+
     console.log(res);
+
+    lastMessageSentTime = currentTime;
+
     return res;
   } catch (error: unknown) {
     if (error instanceof Error) {
