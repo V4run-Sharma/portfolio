@@ -124,7 +124,7 @@ const Intro = () => {
             delay: 0.1,
           }}
           className="hidden sm:block">
-          <a href="https://linkedin.com/in/varunsharmao2" target="_blank">
+          <a href="https://github.com/V4run-Sharma" target="_blank">
             <div className="p-3 border-2 border-white border-opacity-80 bg-[#2b3137] shadow-lg shadow-black/[0.03] backdrop-blur-[0.5rem] rounded-full hover:scale-110 transition duration-300">
               <BsGithub color="white" size={24} className="" />
             </div>
@@ -139,7 +139,7 @@ const Intro = () => {
             delay: 0.1,
           }}
           className="hidden sm:block">
-          <a href="https://linkedin.com/in/varunsharmao2" target="_blank">
+          <a href="https://twitter.com/V4runSharma" target="_blank">
             <div className="p-3 border-2 border-white border-opacity-80 bg-black shadow-lg shadow-black/[0.03] backdrop-blur-[0.5rem] rounded-full hover:scale-110 transition duration-300">
               <BsTwitterX color="white" size={24} className="" />
             </div>

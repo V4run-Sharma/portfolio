@@ -34,6 +34,7 @@ const Contact = () => {
             if (res) setSending(false);
             const error: unknown = res;
             setResData(error);
+            alert("Message sent successfully!");
           }}
           className="p-4 sm:p-6 rounded-md flex flex-col items-center gap-y-4 sm:gap-y-6 max-w-xl w-full bg-gray-50 bg-opacity-80">
           <input
