@@ -13,7 +13,7 @@ const Footer = () => {
         <small className="font-semibold">
           &copy; Varun Sharma. All Rights Reserved.
         </small>
-        <div className="flex gap-x-4 justify-center items-center">
+        <div className="flex gap-x-2 justify-center items-center">
           <a href="https://react.dev" target="_blank"></a>
           <FaReact className="text-2xl text-blue-500" />
           <a href="https://www.framer.com/motion/" target="_blank"></a>
