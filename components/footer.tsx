@@ -13,15 +13,19 @@ const Footer = () => {
         <small className="font-semibold">
           &copy; Varun Sharma. All Rights Reserved.
         </small>
-        <div className="flex gap-x-2 justify-center items-center">
-          <a href="https://react.dev" target="_blank"></a>
-          <FaReact className="text-2xl text-blue-500" />
-          <a href="https://www.framer.com/motion/" target="_blank"></a>
-          <SiFramer className="text-2xl text-black" />
-          <a href="https://nextjs.org" target="_blank"></a>
-          <TbBrandNextjs className="text-2xl text-black" />
-          <a href="https://vercel.com" target="_blank"></a>
-          <SiVercel className="text-2xl text-black" />
+        <div className="flex gap-x-4 justify-center items-center">
+          <a href="https://react.dev" target="_blank">
+            <FaReact className="text-2xl text-blue-500" />
+          </a>
+          <a href="https://www.framer.com/motion/" target="_blank">
+            <SiFramer className="text-2xl text-black" />
+          </a>
+          <a href="https://nextjs.org" target="_blank">
+            <TbBrandNextjs className="text-2xl text-black" />
+          </a>
+          <a href="https://vercel.com" target="_blank">
+            <SiVercel className="text-2xl text-black" />
+          </a>
         </div>
       </div>
     </footer>
