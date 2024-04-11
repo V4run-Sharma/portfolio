@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 
 import { Inter } from "next/font/google";
+import { Analytics } from "@vercel/analytics/react";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 import Header from "@/components/header";
 import MobileMenu from "@/components/mobile-menu";
@@ -34,6 +36,8 @@ export default function RootLayout({
           {children}
           <Footer />
         </ActiveSectionContextProvider>
+        <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   );
