@@ -10,6 +10,7 @@ import ActiveSectionContextProvider from "@/contexts/active-section-context";
 
 import "./globals.css";
 import Footer from "@/components/footer";
+import ScrollToTop from "@/components/scroll-to-top";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -34,6 +35,7 @@ export default function RootLayout({
           <Header />
           <MobileMenu />
           {children}
+          <ScrollToTop />
           <Footer />
         </ActiveSectionContextProvider>
         <Analytics />
