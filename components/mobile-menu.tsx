@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useRef, useState } from "react";
 
 import Link from "next/link";
 
@@ -12,11 +12,16 @@ import { BsGithub, BsTwitterX } from "react-icons/bs";
 import { motion } from "framer-motion";
 
 import { links } from "@/lib/data";
+import useOnClickOutside from "@/hooks/close-mobile-menu";
 
 const MobileMenu = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const ref = useRef<HTMLElement>(null);
+
+  useOnClickOutside(ref, () => setIsOpen(false));
+
   return (
-    <header className="absolute block sm:hidden">
+    <header ref={ref} className="absolute block sm:hidden">
       <motion.div
         initial={{ y: -100, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
