@@ -52,22 +52,27 @@ export const education = [
 
 export const experiencesData = [
   {
+    title: "WEB DEVELOPMENT INTERN",
+    company: "Acmegrade Pvt. Ltd.",
+    location: "Udaipur, Rajasthan (Remote)",
+    description: [
+      "Technical Proficiency: Acquired expertise in HTML, CSS, JavaScript, ReactJS, Node.js, Express.js, TypeScript, SQL, and MongoDB, fostering advanced web development capabilities.",
+      "Database Management: Demonstrated adeptness in database management with SQL and MongoDB, facilitating efficient data storage and retrieval for web applications.",
+      "Project Contributions: Actively participated in the development of functional web applications, collaborating within team environments to achieve project objectives and timelines.",
+      "Communication Skills: Effectively communicated technical concepts and updates, facilitating collaborative problem-solving and code reviews within the team.",
+    ],
+    icon: React.createElement(CgWorkAlt),
+    date: "Nov 2023 - Dec 2023",
+  },
+  {
     title: "MACHINE LEARNING WORKSHOP",
     company: "NASSCOM FutureSkills Prime",
     location: "Udaipur, Rajasthan",
-    description:
+    description: [
       "Spearheaded a hands-on workshop delving into Data Analysis and Machine Learning, gaining expertise in Supervised, Unsupervised, and Reinforcement Learning. Proficiently applied statistical methodologies like Linear, Non-Linear, and Polynomial Regression, optimizing model performance and increasing predictive accuracy by 30%.",
+    ],
     icon: React.createElement(CgWorkAlt),
     date: "Dec 2022",
-  },
-  {
-    title: "DATA ANALYST INTERN",
-    company: "IBM Skills Build",
-    location: "Udaipur, Rajasthan (Remote)",
-    description:
-      "Spearheaded a hands-on workshop delving into Data Analysis and Machine Learning, gaining expertise in Supervised, Unsupervised, and Reinforcement Learning. Proficiently applied statistical methodologies like Linear, Non-Linear, and Polynomial Regression, optimizing model performance and increasing predictive accuracy by 30%.",
-    icon: React.createElement(FaPython),
-    date: "June 2023 - Aug 2023",
   },
 ] as const;
 

@@ -50,7 +50,15 @@ const Experience = () => {
                 <p className="!mt-0 !text-lg">{exp.company}</p>
                 <p className="!text-sm !mt-0 !text-gray-500">{exp.location}</p>
                 <p className="!mt-2 !leading-relaxed !text-gray-700">
-                  {exp.description}
+                  {exp.description.length > 1 &&
+                    exp.description.map((desc, index) => (
+                      <React.Fragment key={index}>
+                        <strong>{desc.split(":")[0]}: </strong>
+                        {desc.split(":")[1]}
+                        <br />
+                      </React.Fragment>
+                    ))}
+                  {exp.description.length === 1 && exp.description[0]}
                 </p>
               </VerticalTimelineElement>
             </React.Fragment>
