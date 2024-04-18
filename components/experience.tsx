@@ -11,7 +11,7 @@ import { useSectionInView } from "@/lib/hooks";
 import { experiencesData } from "@/lib/data";
 
 const Experience = () => {
-  const { ref } = useSectionInView("Experience", 0.25);
+  const { ref } = useSectionInView("Experience", 0.5);
 
   return (
     <section id="experience" ref={ref} className="scroll-mt-28">
