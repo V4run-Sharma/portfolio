@@ -93,7 +93,9 @@ const Intro = () => {
             stiffness: 300,
             delay: 0.05,
           }}>
-          <a href="Varun Sharma Resume Updated.pdf" target="_blank">
+          <a
+            href="https://drive.google.com/file/d/1SgzeE0uLuNJjLv-fK6MYWE_TTGknrI7F/view?usp=sharing"
+            target="_blank">
             <p className="flex justify-center items-center gap-x-3 w-fit px-[30px] py-[12px] text-base font-medium border-2 border-white border-opacity-80 bg-gray-50 bg-opacity-40 shadow-lg shadow-black/[0.03] backdrop-blur-[0.5rem] rounded-full  hover:scale-110 hover:bg-opacity-100 transition duration-300">
               Resume
               <FaClipboardList size={16} />
