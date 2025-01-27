@@ -1,6 +1,5 @@
 import React from "react";
 import { CgWorkAlt } from "react-icons/cg";
-import { FaPython } from "react-icons/fa";
 import GharHero from "@/public/GharHero.webp";
 import ViscordChat from "@/public/ViscordChat.webp";
 
@@ -37,10 +36,10 @@ export const links = [
 
 export const education = [
   {
-    degree: "B.Tech in CSE (8.43 CGPA)",
-    college: "Techno India NJR Institute of Technology",
-    location: "Udaipur, Rajasthan",
-    date: "2021 - 2025 (Expected)",
+    degree: "B.Tech in CSE (8.13 CGPA)",
+    college: "Rajasthan Technical University",
+    location: "Kota, Rajasthan",
+    date: "2021 - 2025",
   },
   {
     degree: "Senior Secondary (92.40%)",
@@ -52,27 +51,30 @@ export const education = [
 
 export const experiencesData = [
   {
+    title: "SOFTEWARE DEVELOPMENT INTERN",
+    company: "Quinbay Technologies",
+    location: "Bangalore, Karnataka (On-Site)",
+    description: [
+      "- Upgraded 3+ microservices to Java 21 and Spring Boot 3, reducing Jenkins CI/CD build times by 60% and improving overall deployment efficiency.",
+      "- Resolved 5+ critical issues across APIs and UI, ensuring accurate data flow and enhancing system stability.",
+      "- Delivered 3+ new features and fixed UI inconsistencies using Vue.js 3 to streamline the user experience.",
+      "- Collaborated with 3+ cross-functional teams to standardize code practices and drive root cause analysis for recurringissues.",
+    ],
+    icon: React.createElement(CgWorkAlt),
+    date: "Aug 2024 -",
+  },
+  {
     title: "WEB DEVELOPMENT INTERN",
     company: "Acmegrade Pvt. Ltd.",
     location: "Udaipur, Rajasthan (Remote)",
     description: [
-      "Technical Proficiency: Acquired expertise in HTML, CSS, JavaScript, ReactJS, Node.js, Express.js, TypeScript, SQL, and MongoDB, fostering advanced web development capabilities.",
-      "Database Management: Demonstrated adeptness in database management with SQL and MongoDB, facilitating efficient data storage and retrieval for web applications.",
-      "Project Contributions: Actively participated in the development of functional web applications, collaborating within team environments to achieve project objectives and timelines.",
-      "Communication Skills: Effectively communicated technical concepts and updates, facilitating collaborative problem-solving and code reviews within the team.",
+      "- Acquired expertise in HTML, CSS, JavaScript, ReactJS, Node.js, Express.js, TypeScript, SQL, and MongoDB, fostering advanced web development capabilities.",
+      "- Demonstrated adeptness in database management with SQL and MongoDB, facilitating efficient data storage and retrieval for web applications.",
+      "- Actively participated in the development of functional web applications, collaborating within team environments to achieve project objectives and timelines.",
+      "- Effectively communicated technical concepts and updates, facilitating collaborative problem-solving and code reviews within the team.",
     ],
     icon: React.createElement(CgWorkAlt),
     date: "Nov 2023 - Dec 2023",
-  },
-  {
-    title: "MACHINE LEARNING WORKSHOP",
-    company: "NASSCOM FutureSkills Prime",
-    location: "Udaipur, Rajasthan",
-    description: [
-      "Spearheaded a hands-on workshop delving into Data Analysis and Machine Learning, gaining expertise in Supervised, Unsupervised, and Reinforcement Learning. Proficiently applied statistical methodologies like Linear, Non-Linear, and Polynomial Regression, optimizing model performance and increasing predictive accuracy by 30%.",
-    ],
-    icon: React.createElement(CgWorkAlt),
-    date: "Dec 2022",
   },
 ] as const;
 
@@ -100,18 +102,23 @@ export const projectsData = [
 export const skillsData = [
   "HTML",
   "CSS",
+  "Java",
+  "Kotlin",
   "JavaScript",
   "TypeScript",
   "React",
+  "Android",
+  "SpringBoot",
+  "Kafka",
+  "Vue.js",
+  "Redis",
   "Next.js",
   "Node.js",
   "Redux",
-  "Docker",
   "Git",
   "Tailwind",
   "Prisma",
   "MongoDB",
-  "Redux",
   "Express",
   "PostgreSQL",
   "Python",

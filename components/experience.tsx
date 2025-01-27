@@ -43,7 +43,8 @@ const Experience = () => {
                   padding: "0rem",
                   background: "#f3f4f6",
                   fontSize: "1.5rem",
-                }}>
+                }}
+              >
                 <h3 className="!font-semibold !text-xl !capitalize">
                   {exp.title}
                 </h3>
@@ -53,12 +54,11 @@ const Experience = () => {
                   {exp.description.length > 1 &&
                     exp.description.map((desc, index) => (
                       <React.Fragment key={index}>
-                        <strong>{desc.split(":")[0]}: </strong>
-                        {desc.split(":")[1]}
+                        {desc}
+                        <br />
                         <br />
                       </React.Fragment>
                     ))}
-                  {exp.description.length === 1 && exp.description[0]}
                 </p>
               </VerticalTimelineElement>
             </React.Fragment>

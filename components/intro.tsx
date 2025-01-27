@@ -18,7 +18,8 @@ const Intro = () => {
     <section
       ref={ref}
       id="home"
-      className="flex flex-col items-center justify-center scroll-mt-28 sm:gap-y-8 gap-y-4">
+      className="flex flex-col items-center justify-center scroll-mt-28 sm:gap-y-8 gap-y-4"
+    >
       <div className="relative h-fit w-fit">
         <motion.div
           className="w-40 h-40 rounded-full border-4 border-white overflow-hidden"
@@ -27,7 +28,8 @@ const Intro = () => {
           transition={{
             type: "tween",
             duration: 0.25,
-          }}>
+          }}
+        >
           <Image
             src={me}
             width={323}
@@ -47,7 +49,8 @@ const Intro = () => {
             stiffness: 150,
             duration: 0.75,
             delay: 0.2,
-          }}>
+          }}
+        >
           👋
         </motion.span>
       </div>
@@ -59,7 +62,8 @@ const Intro = () => {
           transition={{
             type: "spring",
             stiffness: 250,
-          }}>
+          }}
+        >
           Hello, I am <span className="font-bold">Varun Sharma</span>. I enjoy
           building <span className="italic">professional</span> and{" "}
           <span className="italic">dynamic</span> websites using{" "}
@@ -73,10 +77,12 @@ const Intro = () => {
           transition={{
             type: "spring",
             stiffness: 250,
-          }}>
+          }}
+        >
           <Link
             href="#contact"
-            className="flex justify-center items-center gap-x-3 w-fit px-8 py-4 text-sm font-medium rounded-full bg-gray-700 text-gray-50 shadow-lg hover:scale-110 hover:bg-gray-950 group transition duration-300">
+            className="flex justify-center items-center gap-x-3 w-fit px-8 py-4 text-sm font-medium rounded-full bg-gray-700 text-gray-50 shadow-lg hover:scale-110 hover:bg-gray-950 group transition duration-300"
+          >
             Contact Me{" "}
             <BsArrowRight
               size={16}
@@ -92,10 +98,12 @@ const Intro = () => {
             type: "spring",
             stiffness: 300,
             delay: 0.05,
-          }}>
+          }}
+        >
           <a
-            href="https://drive.google.com/file/d/1SgzeE0uLuNJjLv-fK6MYWE_TTGknrI7F/view?usp=sharing"
-            target="_blank">
+            href="https://drive.google.com/file/d/1zYjGdqPUnBTAXimrjVNNRItsJNh4FLRr/view?usp=drive_link"
+            target="_blank"
+          >
             <p className="flex justify-center items-center gap-x-3 w-fit px-[30px] py-[12px] text-base font-medium border-2 border-white border-opacity-80 bg-gray-50 bg-opacity-40 shadow-lg shadow-black/[0.03] backdrop-blur-[0.5rem] rounded-full  hover:scale-110 hover:bg-opacity-100 transition duration-300">
               Resume
               <FaClipboardList size={16} />
@@ -110,7 +118,8 @@ const Intro = () => {
             stiffness: 300,
             delay: 0.1,
           }}
-          className="hidden sm:block">
+          className="hidden sm:block"
+        >
           <a href="https://linkedin.com/in/varunsharmao2" target="_blank">
             <div className="p-2 border-2 border-white border-opacity-80 bg-[#0077b5] shadow-lg shadow-black/[0.03] backdrop-blur-[0.5rem] rounded-full hover:scale-110 transition duration-300">
               <LiaLinkedinIn color="white" size={32} className="" />
@@ -125,7 +134,8 @@ const Intro = () => {
             stiffness: 300,
             delay: 0.1,
           }}
-          className="hidden sm:block">
+          className="hidden sm:block"
+        >
           <a href="https://github.com/V4run-Sharma" target="_blank">
             <div className="p-3 border-2 border-white border-opacity-80 bg-[#2b3137] shadow-lg shadow-black/[0.03] backdrop-blur-[0.5rem] rounded-full hover:scale-110 transition duration-300">
               <BsGithub color="white" size={24} className="" />
@@ -140,7 +150,8 @@ const Intro = () => {
             stiffness: 300,
             delay: 0.1,
           }}
-          className="hidden sm:block">
+          className="hidden sm:block"
+        >
           <a href="https://twitter.com/V4runSharma" target="_blank">
             <div className="p-3 border-2 border-white border-opacity-80 bg-black shadow-lg shadow-black/[0.03] backdrop-blur-[0.5rem] rounded-full hover:scale-110 transition duration-300">
               <BsTwitterX color="white" size={24} className="" />
