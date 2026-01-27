@@ -49,7 +49,7 @@ const sendEmail = async (formData: FormData) => {
       from: "Portfolio Contact <onboarding@resend.dev>",
       to: "sharmavarun.1912@gmail.com",
       subject: subject,
-      reply_to: senderEmail,
+      replyTo: senderEmail,
       text: message,
     });
 
