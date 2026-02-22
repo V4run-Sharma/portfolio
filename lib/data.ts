@@ -13,8 +13,8 @@ export const links = [
     hash: "#about",
   },
   {
-    name: "Education",
-    hash: "#education",
+    name: "Experience",
+    hash: "#experience",
   },
   {
     name: "Projects",
@@ -25,8 +25,8 @@ export const links = [
     hash: "#skills",
   },
   {
-    name: "Experience",
-    hash: "#experience",
+    name: "Education",
+    hash: "#education",
   },
   {
     name: "Contact",
