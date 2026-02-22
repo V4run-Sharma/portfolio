@@ -1,7 +1,12 @@
 import React from "react";
-import { CgWorkAlt } from "react-icons/cg";
 import GharHero from "@/public/GharHero.webp";
 import ViscordChat from "@/public/ViscordChat.webp";
+
+const quinbayIcon = React.createElement("img", {
+  src: "/quinbay_logo.jpeg",
+  alt: "Quinbay Technologies logo",
+  className: "h-full w-full rounded-full object-cover p-1 bg-white",
+});
 
 export const links = [
   {
@@ -54,27 +59,27 @@ export const experiencesData = [
     title: "SOFTWARE DEVELOPMENT ENGINEER",
     company: "Quinbay Technologies",
     location: "Bengaluru, Karnataka (On-site)",
-    description: [
-      "- Designed and implemented a Kafka-driven MongoDB cleanup pipeline, deleting data for ~95,000 sellers and reclaiming ~120 GB of storage.",
-      "- Optimized high-volume batch deletion workflows, reducing service impact and improving processing efficiency by ~40%.",
-      "- Improved backend reliability by implementing failure handling and retry mechanisms for asynchronous jobs, reducing manual intervention by ~30%.",
-      "- Designed resilient API contracts for complex payment flows (QRIS, Installments), improving error handling and data consistency.",
-      "- Implemented feature flags and persistence logic to enable safer rollouts and A/B testing for registration flows.",
+    highlights: [
+      "Designed and implemented a Kafka-driven MongoDB cleanup pipeline, deleting data for ~95,000 sellers and reclaiming ~120 GB of storage.",
+      "Optimized high-volume batch deletion workflows, reducing service impact and improving processing efficiency by ~40%.",
+      "Improved backend reliability by implementing failure handling and retry mechanisms for asynchronous jobs, reducing manual intervention by ~30%.",
+      "Designed resilient API contracts for complex payment flows (QRIS, Installments), improving error handling and data consistency.",
+      "Implemented feature flags and persistence logic to enable safer rollouts and A/B testing for registration flows.",
     ],
-    icon: React.createElement(CgWorkAlt),
+    icon: quinbayIcon,
     date: "Mar 2025 - Present",
   },
   {
     title: "SOFTWARE DEVELOPMENT ENGINEER INTERN",
     company: "Quinbay Technologies",
     location: "Bengaluru, Karnataka (On-site)",
-    description: [
-      "- Assisted in upgrading 3 microservices to Java 21 and Spring Boot 3, reducing Jenkins CI/CD build times by 65% and improving deployment efficiency by 30%.",
-      "- Resolved 5+ critical issues across APIs and UI, ensuring accurate data flow and enhancing system stability.",
-      "- Delivered 3+ new features and fixed UI inconsistencies using Vue.js 3 to streamline the user experience.",
-      "- Collaborated with 3+ cross-functional teams to standardize code practices and drive root cause analysis for recurring issues.",
+    highlights: [
+      "Assisted in upgrading 3 microservices to Java 21 and Spring Boot 3, reducing Jenkins CI/CD build times by 65% and improving deployment efficiency by 30%.",
+      "Resolved 5+ critical issues across APIs and UI, ensuring accurate data flow and enhancing system stability.",
+      "Delivered 3+ new features and fixed UI inconsistencies using Vue.js 3 to streamline the user experience.",
+      "Collaborated with 3+ cross-functional teams to standardize code practices and drive root cause analysis for recurring issues.",
     ],
-    icon: React.createElement(CgWorkAlt),
+    icon: quinbayIcon,
     date: "Aug 2024 - Mar 2025",
   },
 ] as const;

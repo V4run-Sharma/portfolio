@@ -61,7 +61,7 @@ const ProjectCard = ({
                 <div className="flex items-center gap-x-2 sm:gap-x-4">
                   <a href={gitRepo as string} target="_blank">
                     <div className=" border-2 border-[#2b3137] shadow-lg shadow-black/3 backdrop-blur-[0.5rem] rounded-full hover:scale-110 transition duration-300">
-                      <BsGithub size={24} fill="2b3137" />
+                      <BsGithub size={24} fill="#2b3137" className="dark:invert" />
                     </div>
                   </a>
                   <a href={live as string} target="_blank">
@@ -116,7 +116,7 @@ const ProjectCard = ({
                 <div className="flex items-center gap-x-2 sm:gap-x-4">
                   <a href={gitRepo as string} target="_blank">
                     <div className=" border-2 border-[#2b3137] shadow-lg shadow-black/3 backdrop-blur-[0.5rem] rounded-full hover:scale-110 transition duration-300">
-                      <BsGithub size={24} fill="2b3137" />
+                      <BsGithub size={24} fill="#2b3137" className="dark:invert" />
                     </div>
                   </a>
                   <a href={live as string} target="_blank">

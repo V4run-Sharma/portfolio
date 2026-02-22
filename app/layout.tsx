@@ -28,8 +28,8 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth!">
       <body className={`${inter.className} bg-gray-50 text-gray-950 relative`}>
-        <div className="bg-[#c6d4ff] darkbg-[#676394] blur-[15rem] fixed -z-10 rounded-full w-120 h-120 md:w-160 md:h-160 md:-top-32 -top-16 sm:-left-32 xl:left-32 md:-left-32 -left-48"></div>
-        <div className="bg-[#a8ffe3] darkbg-[#589380] blur-[15rem] fixed -z-10 rounded-full w-120 h-120 md:w-160 md:h-160 md:-top-32 -bottom-16 sm:-right-32 xl:-right-32 md:-right-32 -right-48"></div>
+        <div className="theme-blob-a bg-[#c6d4ff] blur-[15rem] fixed -z-10 rounded-full w-120 h-120 md:w-160 md:h-160 md:-top-32 -top-16 sm:-left-32 xl:left-32 md:-left-32 -left-48"></div>
+        <div className="theme-blob-b bg-[#a8ffe3] blur-[15rem] fixed -z-10 rounded-full w-120 h-120 md:w-160 md:h-160 md:-top-32 -bottom-16 sm:-right-32 xl:-right-32 md:-right-32 -right-48"></div>
 
         <ActiveSectionContextProvider>
           <Header />

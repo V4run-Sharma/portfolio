@@ -9,6 +9,7 @@ import { motion } from "framer-motion";
 import clsx from "clsx";
 import { links } from "@/lib/data";
 import { useActiveSectionContext } from "@/contexts/active-section-context";
+import ThemeToggle from "@/components/theme-toggle";
 
 export default function Header() {
   const { activeSection, setActiveSection, setTimeOfLastClick } =
@@ -17,7 +18,7 @@ export default function Header() {
   return (
     <header className="z-999 hidden sm:block relative">
       <motion.div
-        className="fixed top-0 left-1/2 h-18 w-full rounded-none border-2 border-white border-opacity-40 bg-gray-50 bg-opacity-80 shadow-lg shadow-black/3 backdrop-blur-[0.5rem] sm:top-6 sm:h-13 sm:w-172 sm:rounded-full darkbg-gray-950 darkborder-black/40 darkbg-opacity-75"
+        className="fixed top-0 left-1/2 h-18 w-full rounded-none border-2 border-white border-opacity-40 bg-gray-50 bg-opacity-80 shadow-lg shadow-black/3 backdrop-blur-[0.5rem] sm:top-6 sm:h-13 sm:w-185 sm:rounded-full darkbg-gray-950 darkborder-black/40 darkbg-opacity-75"
         initial={{ y: -100, x: "-50%", opacity: 0 }}
         animate={{ y: 0, x: "-50%", opacity: 1 }}></motion.div>
       <nav className="flex fixed top-[0.15rem] left-1/2 h-12 -translate-x-1/2 py-2 sm:top-[1.7rem] sm:h-[initial] sm:py-0">
@@ -55,6 +56,13 @@ export default function Header() {
               </Link>
             </motion.li>
           ))}
+          <motion.li
+            className="h-3/4 flex items-center justify-center relative"
+            initial={{ y: -100, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+          >
+            <ThemeToggle />
+          </motion.li>
         </ul>
       </nav>
     </header>
