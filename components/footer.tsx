@@ -8,7 +8,7 @@ import { TbBrandNextjs } from "react-icons/tb";
 const Footer = () => {
   return (
     <footer className="w-screen py-4 sm:px-4 mt-16 flex flex-col justify-center items-center">
-      <div className="w-full h-0.5 bg-gradient-to-r from-[#c6d4ff] to-[#a8ffe3] mb-4"></div>
+      <div className="w-full h-0.5 bg-linear-to-r from-[#c6d4ff] to-[#a8ffe3] mb-4"></div>
       <div className="w-full flex flex-col sm:flex-row justify-between items-center gap-4 sm:px-16">
         <small className="font-semibold">
           &copy; Varun Sharma. All Rights Reserved.

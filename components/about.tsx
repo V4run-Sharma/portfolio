@@ -21,12 +21,12 @@ const About = () => {
         }}>
         <h1 className="sm:text-2xl text-xl font-bold text-center">About Me</h1>
         <p className="text-center text-sm sm:text-base font-medium leading-loose sm:leading-8 sm:[word-spacing:0.25rem]">
-          I specialize in crafting professional websites using{" "}
-          <strong>React</strong>, especially <strong>Next.js</strong>. My focus
-          lies in delivering <em>seamless user experiences</em> with a keen eye
-          for design and functionality. Continuously refining my skills keeps me
-          ahead in the digital landscape, ensuring I deliver top-notch results
-          that leave a lasting impression.
+          I am a software engineer focused on <strong>backend development</strong>{" "}
+          with <strong>Java, Spring Boot, Kafka, Redis, and MongoDB</strong>. I
+          work on high-impact systems, resilient APIs, and performance-focused
+          workflows, and I also build full-stack products using{" "}
+          <strong>React/Next.js</strong>. I enjoy solving reliability and scale
+          problems while keeping user experience and product quality strong.
         </p>
       </motion.div>
     </section>

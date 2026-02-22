@@ -22,7 +22,7 @@ const Intro = () => {
     >
       <div className="relative h-fit w-fit">
         <motion.div
-          className="w-40 h-40 rounded-full border-4 border-white overflow-hidden"
+          className="w-56 h-56 rounded-full border-4 border-white overflow-hidden"
           initial={{ scale: 0, opacity: 0 }}
           animate={{ scale: 1, opacity: 1 }}
           transition={{
@@ -32,27 +32,13 @@ const Intro = () => {
         >
           <Image
             src={me}
-            width={323}
-            height={360}
-            quality={75}
+            width={500}
+            height={500}
             priority={true}
             alt="Varun's Photo"
-            className="object-cover scale-110"
+            className="object-cover scale-150"
           />
         </motion.div>
-        <motion.span
-          className="text-5xl absolute bottom-0 right-0"
-          initial={{ scale: 0, opacity: 0 }}
-          animate={{ scale: 1, opacity: 1 }}
-          transition={{
-            type: "spring",
-            stiffness: 150,
-            duration: 0.75,
-            delay: 0.2,
-          }}
-        >
-          👋
-        </motion.span>
       </div>
       <div className="max-w-xl">
         <motion.p
@@ -64,10 +50,10 @@ const Intro = () => {
             stiffness: 250,
           }}
         >
-          Hello, I am <span className="font-bold">Varun Sharma</span>. I enjoy
-          building <span className="italic">professional</span> and{" "}
-          <span className="italic">dynamic</span> websites using{" "}
-          <span className="underline">React(Next.js)</span>.
+          Hello, I am <span className="font-bold">Varun Sharma</span>. I build{" "}
+          <span className="italic">scalable backend systems</span> and{" "}
+          <span className="italic">full-stack products</span> with{" "}
+          <span className="underline">Java and Spring Boot</span>.
         </motion.p>
       </div>
       <div className="flex flex-wrap gap-4 justify-center items-center">
@@ -101,10 +87,10 @@ const Intro = () => {
           }}
         >
           <a
-            href="https://drive.google.com/file/d/1zYjGdqPUnBTAXimrjVNNRItsJNh4FLRr/view?usp=drive_link"
+            href="/Varun%20Sharma%20Resume%20Updated.pdf"
             target="_blank"
           >
-            <p className="flex justify-center items-center gap-x-3 w-fit px-[30px] py-[12px] text-base font-medium border-2 border-white border-opacity-80 bg-gray-50 bg-opacity-40 shadow-lg shadow-black/[0.03] backdrop-blur-[0.5rem] rounded-full  hover:scale-110 hover:bg-opacity-100 transition duration-300">
+            <p className="flex justify-center items-center gap-x-3 w-fit px-[30px] py-[12px] text-base font-medium border-2 border-white border-opacity-80 bg-gray-50 bg-opacity-40 shadow-lg shadow-black/3 backdrop-blur-[0.5rem] rounded-full  hover:scale-110 hover:bg-opacity-100 transition duration-300">
               Resume
               <FaClipboardList size={16} />
             </p>
@@ -121,7 +107,7 @@ const Intro = () => {
           className="hidden sm:block"
         >
           <a href="https://linkedin.com/in/varunsharmao2" target="_blank">
-            <div className="p-2 border-2 border-white border-opacity-80 bg-[#0077b5] shadow-lg shadow-black/[0.03] backdrop-blur-[0.5rem] rounded-full hover:scale-110 transition duration-300">
+            <div className="p-2 border-2 border-white border-opacity-80 bg-[#0077b5] shadow-lg shadow-black/3 backdrop-blur-[0.5rem] rounded-full hover:scale-110 transition duration-300">
               <LiaLinkedinIn color="white" size={32} className="" />
             </div>
           </a>
@@ -137,7 +123,7 @@ const Intro = () => {
           className="hidden sm:block"
         >
           <a href="https://github.com/V4run-Sharma" target="_blank">
-            <div className="p-3 border-2 border-white border-opacity-80 bg-[#2b3137] shadow-lg shadow-black/[0.03] backdrop-blur-[0.5rem] rounded-full hover:scale-110 transition duration-300">
+            <div className="p-3 border-2 border-white border-opacity-80 bg-[#2b3137] shadow-lg shadow-black/3 backdrop-blur-[0.5rem] rounded-full hover:scale-110 transition duration-300">
               <BsGithub color="white" size={24} className="" />
             </div>
           </a>
@@ -153,7 +139,7 @@ const Intro = () => {
           className="hidden sm:block"
         >
           <a href="https://twitter.com/V4runSharma" target="_blank">
-            <div className="p-3 border-2 border-white border-opacity-80 bg-black shadow-lg shadow-black/[0.03] backdrop-blur-[0.5rem] rounded-full hover:scale-110 transition duration-300">
+            <div className="p-3 border-2 border-white border-opacity-80 bg-black shadow-lg shadow-black/3 backdrop-blur-[0.5rem] rounded-full hover:scale-110 transition duration-300">
               <BsTwitterX color="white" size={24} className="" />
             </div>
           </a>

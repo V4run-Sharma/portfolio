@@ -18,7 +18,7 @@ const ScrollToTop = () => {
 
   return (
     <motion.article
-      className="sm:hidden fixed bottom-4 right-4 z-[999]"
+      className="sm:hidden fixed bottom-4 right-4 z-999"
       initial={{ y: 100, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}>
       <button
@@ -28,7 +28,7 @@ const ScrollToTop = () => {
             behavior: "smooth",
           });
         }}
-        className="p-1.5 bg-gray-50 bg-opacity-80 border-2 border-white rounded-full flex justify-center items-center shadow-lg shadow-black/[0.1]">
+        className="p-1.5 bg-gray-50 bg-opacity-80 border-2 border-white rounded-full flex justify-center items-center shadow-lg shadow-black/10">
         <IoIosArrowUp size={20} />
       </button>
     </motion.article>

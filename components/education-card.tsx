@@ -34,7 +34,7 @@ const EducationCard = ({
           opacity: opacityProgess,
         }}
         className="hidden sm:block">
-        <article className="p-[1.5px] rounded-lg bg-gradient-to-b from-[#c6d4ff] to-[#a8ffe3] flex justify-center items-center">
+        <article className="p-[1.5px] rounded-lg bg-linear-to-b from-[#c6d4ff] to-[#a8ffe3] flex justify-center items-center">
           <div className="w-full h-full flex flex-col p-4 sm:p-6 bg-gray-100 hover:bg-gray-50 transition rounded-md gap-y-2 sm:gap-y-4">
             <h2 className="text-lg sm:text-xl font-bold">{degree}</h2>
             <div className="flex flex-col">
@@ -46,7 +46,7 @@ const EducationCard = ({
         </article>
       </motion.div>
       <div className="sm:hidden">
-        <article className="p-[1.5px] rounded-lg bg-gradient-to-b from-[#c6d4ff] to-[#a8ffe3] flex justify-center items-center">
+        <article className="p-[1.5px] rounded-lg bg-linear-to-b from-[#c6d4ff] to-[#a8ffe3] flex justify-center items-center">
           <div className="w-full h-full flex flex-col p-4 sm:p-6 bg-gray-100 hover:bg-gray-50 transition rounded-md gap-y-2 sm:gap-y-4">
             <h2 className="text-lg sm:text-xl font-bold">{degree}</h2>
             <div className="flex flex-col">

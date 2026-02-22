@@ -45,12 +45,12 @@ const Experience = () => {
                   fontSize: "1.5rem",
                 }}
               >
-                <h3 className="!font-semibold !text-xl !capitalize">
+                <h3 className="font-semibold! text-xl! capitalize!">
                   {exp.title}
                 </h3>
-                <p className="!mt-0 !text-lg">{exp.company}</p>
-                <p className="!text-sm !mt-0 !text-gray-500">{exp.location}</p>
-                <p className="!mt-2 !leading-relaxed !text-gray-700">
+                <p className="mt-0! text-lg!">{exp.company}</p>
+                <p className="text-sm! mt-0! text-gray-500!">{exp.location}</p>
+                <p className="mt-2! leading-relaxed! text-gray-700!">
                   {exp.description.length > 1 &&
                     exp.description.map((desc, index) => (
                       <React.Fragment key={index}>
@@ -68,14 +68,20 @@ const Experience = () => {
       <article className="flex flex-col gap-y-4 sm:hidden">
         {experiencesData.map((exp, index) => (
           <React.Fragment key={index}>
-            <div className="p-[1.5px] rounded-lg bg-gradient-to-b from-[#c6d4ff] to-[#a8ffe3] flex justify-center items-center">
+            <div className="p-[1.5px] rounded-lg bg-linear-to-b from-[#c6d4ff] to-[#a8ffe3] flex justify-center items-center">
               <div className="w-full h-full flex flex-col text-gray-950 p-4 bg-gray-100 hover:bg-gray-50 transition rounded-md">
                 <h3 className="font-semibold capitalize">{exp.title}</h3>
                 <p>{exp.company}</p>
                 <p className="text-xs text-gray-500">{exp.location}</p>
                 <p className="text-xs text-gray-500 font-bold">{exp.date}</p>
                 <p className="text-xs font-medium mt-4 text-gray-500 leading-5">
-                  {exp.description}
+                  {exp.description.map((desc, index) => (
+                    <React.Fragment key={index}>
+                      {desc}
+                      <br />
+                      <br />
+                    </React.Fragment>
+                  ))}
                 </p>
               </div>
             </div>

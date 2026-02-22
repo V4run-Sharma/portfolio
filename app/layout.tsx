@@ -17,7 +17,7 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: "Varun | Portfolio",
   description:
-    "Varun Sharma, Full Stack Developer, Web Designer, Software Engineer",
+    "Varun Sharma, Software Development Engineer focused on Backend and Full-Stack systems",
 };
 
 export default function RootLayout({
@@ -26,10 +26,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="!scroll-smooth">
+    <html lang="en" className="scroll-smooth!">
       <body className={`${inter.className} bg-gray-50 text-gray-950 relative`}>
-        <div className="bg-[#c6d4ff] darkbg-[#676394] blur-[15rem] fixed -z-10 rounded-full w-[30rem] h-[30rem] md:w-[40rem] md:h-[40rem] md:top-[-8rem] top-[-4rem] sm:left-[-8rem] xl:left-[8rem] md:left-[-8rem] left-[-12rem]"></div>
-        <div className="bg-[#a8ffe3] darkbg-[#589380] blur-[15rem] fixed -z-10 rounded-full w-[30rem] h-[30rem] md:w-[40rem] md:h-[40rem] md:top-[-8rem] bottom-[-4rem] sm:right-[-8rem] xl:right-[8rem] md:right-[-8rem] right-[-12rem]"></div>
+        <div className="bg-[#c6d4ff] darkbg-[#676394] blur-[15rem] fixed -z-10 rounded-full w-120 h-120 md:w-160 md:h-160 md:-top-32 -top-16 sm:-left-32 xl:left-32 md:-left-32 -left-48"></div>
+        <div className="bg-[#a8ffe3] darkbg-[#589380] blur-[15rem] fixed -z-10 rounded-full w-120 h-120 md:w-160 md:h-160 md:-top-32 -bottom-16 sm:-right-32 xl:-right-32 md:-right-32 -right-48"></div>
 
         <ActiveSectionContextProvider>
           <Header />

@@ -26,7 +26,7 @@ const Contact = () => {
         </a>{" "}
         or through this form.
       </p>
-      <div className="p-[1.5px] rounded-lg bg-gradient-to-b from-[#c6d4ff] to-[#a8ffe3] flex flex-col justify-center items-center">
+      <div className="p-[1.5px] rounded-lg bg-linear-to-b from-[#c6d4ff] to-[#a8ffe3] flex flex-col justify-center items-center">
         <form
           action={async (formData: FormData) => {
             setSending(true);

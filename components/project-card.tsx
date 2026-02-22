@@ -10,12 +10,12 @@ import { motion, useScroll, useTransform } from "framer-motion";
 
 type ProjectCardProps = {
   index: number;
-  title: String;
-  description: String;
-  tags: String[];
-  imageUrl: StaticImageData;
-  gitRepo: String;
-  live: String;
+  title: string;
+  description: string;
+  tags: string[];
+  imageUrl?: StaticImageData;
+  gitRepo: string;
+  live: string;
 };
 
 const ProjectCard = ({
@@ -27,6 +27,7 @@ const ProjectCard = ({
   gitRepo,
   live,
 }: ProjectCardProps) => {
+  const hasImage = Boolean(imageUrl);
   const ref = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
     target: ref,
@@ -46,24 +47,26 @@ const ProjectCard = ({
         className="relative hidden sm:block">
         <article className="relative">
           <div
-            className={`group bg-gray-50 bg-opacity-80 max-w-[42rem] border-2 border-white rounded-lg overflow-hidden sm:pr-8 relative sm:h-[20rem] hover:bg-opacity-100 transition ${
+            className={`group bg-gray-50 bg-opacity-80 max-w-2xl border-2 border-white rounded-lg overflow-hidden sm:pr-8 relative sm:h-80 hover:bg-opacity-100 transition ${
               index % 2 !== 0 ? "sm:pl-8" : ""
             } darktext-white darkbg-white/10 darkhover:bg-white/20`}>
             <div
-              className={`pt-4 pb-7 px-5 sm:pl-10 sm:pr-2 sm:pt-10 sm:max-w-[50%] flex flex-col h-full ${
-                index % 2 !== 0 ? "sm:ml-[18rem]" : ""
+              className={`pt-4 pb-7 px-5 sm:pl-10 sm:pr-2 sm:pt-10 flex flex-col h-full ${
+                hasImage ? "sm:max-w-[50%]" : "sm:max-w-full"
+              } ${
+                index % 2 !== 0 && hasImage ? "sm:ml-72" : ""
               }`}>
               <div className="flex items-center gap-x-4">
                 <h3 className="text-2xl font-semibold">{title}</h3>
                 <div className="flex items-center gap-x-2 sm:gap-x-4">
                   <a href={gitRepo as string} target="_blank">
-                    <div className=" border-2 border-[#2b3137] shadow-lg shadow-black/[0.03] backdrop-blur-[0.5rem] rounded-full hover:scale-110 transition duration-300">
+                    <div className=" border-2 border-[#2b3137] shadow-lg shadow-black/3 backdrop-blur-[0.5rem] rounded-full hover:scale-110 transition duration-300">
                       <BsGithub size={24} fill="2b3137" />
                     </div>
                   </a>
                   <a href={live as string} target="_blank">
-                    <div className="px-2 py-0.5 text-sm border-2 border-[#2b3137] shadow-lg shadow-black/[0.03] backdrop-blur-[0.5rem] rounded-full hover:scale-110 transition duration-300">
-                      Live
+                    <div className="px-2 py-0.5 text-sm border-2 border-[#2b3137] shadow-lg shadow-black/3 backdrop-blur-[0.5rem] rounded-full hover:scale-110 transition duration-300">
+                      Open
                     </div>
                   </a>
                 </div>
@@ -81,40 +84,44 @@ const ProjectCard = ({
                 ))}
               </ul>
             </div>
-            <Image
-              src={imageUrl}
-              alt="Project I worked on"
-              quality={75}
-              className={`absolute hidden sm:block top-8 -right-40 w-[28.25rem] rounded-lg shadow-2xl transition group-hover:scale-[1.04] group-hover:-translate-x-3 group-hover:translate-y-3 group-hover:-rotate-2 ${
-                index % 2 !== 0
-                  ? "group-hover:translate-x-3 group-hover:translate-y-3 group-hover:rotate-2 right-[initial] -left-40"
-                  : ""
-              }`}
-            />
+            {imageUrl ? (
+              <Image
+                src={imageUrl}
+                alt="Project I worked on"
+                quality={75}
+                className={`absolute hidden sm:block top-8 -right-40 w-113 rounded-lg shadow-2xl transition group-hover:scale-[1.04] group-hover:-translate-x-3 group-hover:translate-y-3 group-hover:-rotate-2 ${
+                  index % 2 !== 0
+                    ? "group-hover:translate-x-3 group-hover:translate-y-3 group-hover:rotate-2 right-[initial] -left-40"
+                    : ""
+                }`}
+              />
+            ) : null}
           </div>
         </article>
       </motion.div>
       <div className="sm:hidden">
         <article className="relative">
           <div
-            className={`group bg-gray-50 bg-opacity-80 max-w-[42rem] border-2 border-white rounded-lg overflow-hidden sm:pr-8 relative sm:h-[20rem] hover:bg-opacity-100 transition ${
+            className={`group bg-gray-50 bg-opacity-80 max-w-2xl border-2 border-white rounded-lg overflow-hidden sm:pr-8 relative sm:h-80 hover:bg-opacity-100 transition ${
               index % 2 !== 0 ? "sm:pl-8" : ""
             } darktext-white darkbg-white/10 darkhover:bg-white/20`}>
             <div
-              className={`pt-4 pb-7 px-5 sm:pl-10 sm:pr-2 sm:pt-10 sm:max-w-[50%] flex flex-col h-full ${
-                index % 2 !== 0 ? "sm:ml-[18rem]" : ""
+              className={`pt-4 pb-7 px-5 sm:pl-10 sm:pr-2 sm:pt-10 flex flex-col h-full ${
+                hasImage ? "sm:max-w-[50%]" : "sm:max-w-full"
+              } ${
+                index % 2 !== 0 && hasImage ? "sm:ml-72" : ""
               }`}>
               <div className="flex items-center gap-x-4">
                 <h3 className="text-2xl font-semibold">{title}</h3>
                 <div className="flex items-center gap-x-2 sm:gap-x-4">
                   <a href={gitRepo as string} target="_blank">
-                    <div className=" border-2 border-[#2b3137] shadow-lg shadow-black/[0.03] backdrop-blur-[0.5rem] rounded-full hover:scale-110 transition duration-300">
+                    <div className=" border-2 border-[#2b3137] shadow-lg shadow-black/3 backdrop-blur-[0.5rem] rounded-full hover:scale-110 transition duration-300">
                       <BsGithub size={24} fill="2b3137" />
                     </div>
                   </a>
                   <a href={live as string} target="_blank">
-                    <div className="px-2 py-0.5 text-sm border-2 border-[#2b3137] shadow-lg shadow-black/[0.03] backdrop-blur-[0.5rem] rounded-full hover:scale-110 transition duration-300">
-                      Live
+                    <div className="px-2 py-0.5 text-sm border-2 border-[#2b3137] shadow-lg shadow-black/3 backdrop-blur-[0.5rem] rounded-full hover:scale-110 transition duration-300">
+                      Open
                     </div>
                   </a>
                 </div>
@@ -132,16 +139,18 @@ const ProjectCard = ({
                 ))}
               </ul>
             </div>
-            <Image
-              src={imageUrl}
-              alt="Project I worked on"
-              quality={75}
-              className={`absolute hidden sm:block top-8 -right-40 w-[28.25rem] rounded-lg shadow-2xl transition group-hover:scale-[1.04] group-hover:-translate-x-3 group-hover:translate-y-3 group-hover:-rotate-2 ${
-                index % 2 !== 0
-                  ? "group-hover:translate-x-3 group-hover:translate-y-3 group-hover:rotate-2 right-[initial] -left-40"
-                  : ""
-              }`}
-            />
+            {imageUrl ? (
+              <Image
+                src={imageUrl}
+                alt="Project I worked on"
+                quality={75}
+                className={`absolute hidden sm:block top-8 -right-40 w-113 rounded-lg shadow-2xl transition group-hover:scale-[1.04] group-hover:-translate-x-3 group-hover:translate-y-3 group-hover:-rotate-2 ${
+                  index % 2 !== 0
+                    ? "group-hover:translate-x-3 group-hover:translate-y-3 group-hover:rotate-2 right-[initial] -left-40"
+                    : ""
+                }`}
+              />
+            ) : null}
           </div>
         </article>
       </div>
